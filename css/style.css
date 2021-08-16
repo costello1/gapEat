@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    background-image: url(../img/back.png);
+    height: 100vh;
+}
+
+.img{
+    max-width: 150px;
+    float: left;
+    padding: 10px;
+    padding-right: 20px;
+}
+
+.name{
+    padding-top: 5%;
+    font-size: 30px;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.desc{
+    padding-bottom: 10px;
+}
+
+.luogo{
+    font-size: 12px;
+}
+
+#nav{
+    position: relative;
+    position: fixed;
+    width: 98%;
+    border: 1px solid;
+    background-color: white;
+    z-index: 999;
+    
+}
+
+#logout{
+    position: absolute;
+    right: 1%;
+    top: 20%;
+}
+
+#logo{
+    left: 0;
+}
+
+#container{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 2fr);
+    margin-top: 80px;
+    float: right;
+    width: 80% !important;
+}
+
+.restaurant{
+    width: 80%;
+    margin-bottom: 1%;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.restaurant:hover{
+    transform: translate(0, -10px);
+    transition-duration: 0.2s;
+}
+
+#footer{
+    position: absolute;
+    position: fixed;
+    bottom: 0;
+    width: 97vw;
+    background-color: aqua;
+}
+
+input{
+    height: 25px;
+}
+
+.icon{
+    margin-bottom: -5px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 630px){
+
+    #container{
+        width: 100% !important;
+        margin-top: 200px;
+        grid-template-columns: repeat(1, 2fr);
+    }
+
+    .filter{
+        padding: 15px;
+        margin-top: 80px;
+        text-align: center;
+        background-color: white;
+        position: left;
+        right: 25%;
+        position: fixed;
+    }
+
+    .restaurant{
+        width: 100%;
+        margin-bottom: 1%;
+        background-color: white;
+        border: 1px solid;
+        border-radius: 5px;
+        box-shadow: 15px 15px 5px #edebeb;
+    }
+    
+    .restaurant:hover{
+        transform: translate(0, -10px);
+        transition-duration: 0.2s;
+    }
+
+}
+
+@media screen and (min-width: 630px) and (max-width: 779px){
+    #container{
+        width: 100% !important;
+        margin-top: 200px;
+        grid-template-columns: repeat(1, 2fr);
+    }
+
+    .filter{
+        padding: 15px;
+        margin-top: 80px;
+        text-align: center;
+        background-color: white;
+        position: left;
+        right: 35%;
+        position: fixed;
+    }
+
+    .restaurant{
+        width: 100%;
+        margin-bottom: 1%;
+        background-color: white;
+        border: 1px solid;
+        border-radius: 5px;
+        box-shadow: 15px 15px 5px #edebeb;
+    }
+    
+    .restaurant:hover{
+        transform: translate(0, -10px);
+        transition-duration: 0.2s;
+    }
+}
+
+@media screen and (min-width: 779px) and (max-width: 1300px){
+    #container{
+        margin-top: 200px;
+        grid-template-columns: repeat(1, 2fr);
+    }
+
+    .filter{
+        padding: 15px;
+        margin-top: 80px;
+        text-align: center;
+        background-color: white;
+        position: absolute;
+        right: 40%;
+        position: fixed;
+    }
+
+    
+}
+
+@media screen and (min-width: 1300px) and (max-width: 3000px){
+
+    .filter{
+        padding: 15px;
+        margin-top: 80px;
+        border: solid 1px;
+        border-radius: 5px;
+        float: left;
+        background-color: white;
+        min-height: 80%;
+        position: fixed;
+    }
+}

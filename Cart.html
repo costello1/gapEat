@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styleCart.css">
+    <script src="js/jquery.js"></Script>
+</head>
+<body>
+    <div id="nav">
+        <img id="logo" src="img/logo.svg" width=50>
+        <img id="logout" class="logout" onclick="logout()" src="img/user.svg" width=30>
+    </div>
+
+    <div class="container">
+        <h2 id="cart">Lista carrello:<br><h3 id="cart"></h3></h2>
+        <h2 id="tot">Spesa tot </H2>
+        <h2>Per completare l'ordine inserire tutti i dati</h2>
+        <form action="">
+            <input type="hidden" id="email" name="Email" value="">
+            <div class="inputBox">
+                <input type="text" required="required" id="Nome" name="Nome">
+                <span>Nome...</span>
+            </div>
+            <div class="inputBox">
+                <input type="text" required="required" id="Cognome" name="Cognome">
+                <span>Cognome...</span>
+            </div>
+            <div class="inputBox">
+                <input type="text" required="required" id="Citta" name="Citta">
+                <span>Citta`...</span>
+            </div>
+            <div class="inputBox">
+                <input type="number" required="required" id="CAP" name="CAP">
+                <span>CAP...</span>
+            </div>
+            <div class="inputBox">
+                <input type="text" required="required" id="Via" name="Via">
+                <span>Via di casa...</span>
+            </div>
+            <div class="inputBox">
+                <input type="number" required="required" id="Telefono" name="Telefono">
+                <span>Numero di telefono...</span>
+            </div>
+            <h4>Nel caso in cui la vostra abitazione non sia facile da identificare, specificarlo per i nostri corrieri (Se l'ordine 
+                è a domicilio)
+            </h4>
+            <div class="inputBox">
+                <input type="text" required="required" id="Note" name="Note">
+                <span>Note aggiuntive...</span>
+            </div>
+            <h2>Questi dati verranno usati per effettuare l'ordine, potresti essere ricontattato</h2>
+        </form>
+        <div class="inputBox" id="btn">
+            <input type="submit" value="Ordina!" id="send">
+        </div>
+    </div>
+
+
+
+    <!--<div id="cart">Il tuo carrello comprende: <br></div>
+    <div id="tot">Per un totale di: </div>
+
+    <form id="form" name="form" action="" method="post">   
+        <div>Per completare l'ordine, inserire i seguenti dati:</div><br>
+        <input type="hidden" id="email" name="Email" value="">
+        <input type="text" id="Nome" placeholder="Nome..." name="Nome">
+        <input type="text" id="Cognome" placeholder="Cognome..." name="Cognome">
+        <input type="text" id="Citta" placeholder="Città..." name="Citta">
+        <input type="text" id="CAP" placeholder="CAP..." name="CAP">
+        <input type="text" id="Via" placeholder="Via..." name="Via">
+        <input type="text" id="Telefono" placeholder="Telefono..." name="Telefono">
+        <input type="text" id="Note" placeholder="Note aggiuntive..." name="Note">
+        <br><br>
+        <div>Questi dati verranno usati per effettuare l'ordine, potresti essere ricontattato</div>
+    </form>
+    <div id="btn">
+        <button id="send">Invia Ordine!</button>
+    </div>-->
+
+    <div id="footer" class="footer">
+        © Tutti i diritti riservati 
+        
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAbfTGOn02jyRqyaNPX7niOrsA_EztNxT8",
+            authDomain: "provasito-80e81.firebaseapp.com",
+            databaseURL: "https://provasito-80e81.firebaseio.com",
+            projectId: "provasito-80e81",
+            storageBucket: "provasito-80e81.appspot.com",
+            messagingSenderId: "370133519473",
+            appId: "1:370133519473:web:2b463a843b8695e5e41fd0",
+            measurementId: "G-3Z8KBR51KB"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+    </script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
